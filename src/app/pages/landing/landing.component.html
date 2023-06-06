@@ -1,0 +1,132 @@
+<section class="landing">
+  <div class="parallax">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <div class="profile-picture">
+            <img src="../../../assets/Screenshot 2023-05-11 181736.png" class="img-fluid rounded-circle">
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+          <h1 class="display-4 text-white">¡Bienvenido a mi CV!</h1>
+          <p class="lead text-white">¡Hola! Soy Jaime y este es mi currículum vitae.</p>
+          <a target="_blank" href="https://drive.google.com/file/d/1RLtGo3whKsHzIEUHZjsMfdGHoi3s2tgE/view?usp=sharing" class="btn btn-primary btn-lg">Descargar CV</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="about animated-scroll">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="img-container">
+          <img src="../../../assets/Screenshot 2023-05-11 181736.png" alt="Foto Acerca de mí" class="img-fluid">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="about-content">
+          <h2 class="section-title">Acerca de mí</h2>
+          <p class="lead">¡Hola! Soy Jaime, un Ingeniero en software apasionado por el desarrollo web, con experiencia en MEAN Stack. Me encanta colaborar y generar soluciones competentes para traer un beneficio a la sociedad. Estoy comprometido a brindar un cambio ya sea tecnologico y social, me gusta conocer personas interesantes.</p>
+          <div class="row">
+
+            <div class="container">
+              <div class="row">
+
+                <div class="col-md-6">
+                  <p>•  Hacer ejercicio 🏋🏽</p>
+                  <p>•  Pasar tiempo con amigos 🙆🏽‍♂️</p>
+                  <p>•  Videojuegos 🎮</p>
+                </div>
+                <div class="col-md-6">
+                  <p>•  Jugar con mis perros 🐶</p>
+                  <p>•  Gatos 😼</p>
+                  <p>•  Peliculas 🎞️</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+
+
+
+          <div class="social-buttons" style="margin-top: 4rem;">
+            <a href="https://drive.google.com/file/d/1RLtGo3whKsHzIEUHZjsMfdGHoi3s2tgE/view?usp=sharing" class="btn btn-primary" class="social-button cv" target="_blank">Descargar CV
+
+            </a>
+            <a href="https://github.com/Daetaurusseptem" target="_blank" class="social-button github">
+              <i class="fa fa-github" aria-hidden="true"></i>GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/jaime-antonio-burciaga-alvarez-bb8337229/" target="_blank" class="social-button linkedin">
+              <i class="fa fa-linkedin"></i> LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="technologies animated-scroll">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2 class="section-title">Tecnologías</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div *ngFor="let technology of technologies" class="col-md-4">
+        <div class="card">
+          <img [src]="technology.image" alt="Descripción de la imagen" class="card-image">
+          <div class="card-body">
+            <h5 class="card-title">{{technology.technology}}</h5>
+            <p class="card-text">{{technology.level}}</p>
+            <p class="card-text">{{technology.description | slice:0:50}}...</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="parallax-separator">
+  <div class="parallax-image"></div>
+</div>
+
+<section class="soft-skills animated-scroll">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2 class="section-title">Soft Skills</h2>
+      </div>
+      <div class="row">
+        <div *ngFor="let softSkill of softSkills" class="col-md-4">
+          <div class="card">
+
+            <div class="card-body">
+              <h5 class="card-title">{{softSkill.nombre}}</h5>
+              <p class="card-text">{{softSkill.descripcion}}</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+</section>
+<footer class="footer">
+  <div class="container">
+    <p>&copy; {{this.currentYear.getFullYear()}} Jaime Antonio Burciaga Alvarez. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://github.com/Daetaurusseptem" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/jaime-antonio-burciaga-alvarez-bb8337229/" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a>
+    </div>
+  </div>
+</footer>
